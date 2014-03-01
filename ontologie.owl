@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/djallil/ontologies/2014/1/volleyball_ontologie0.0.1"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/djallil/ontologies/2014/1/volleyball_ontologie0.0.1">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Une ontologie qui modélise et formalise les concepts d&apos;equipe, de joueur, de championnat et de fédération dans le volleyball en particulier et les sports d&apos;équipe en général.
+</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Club"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Competition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetitionContinentale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetitionEspoir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetitionJunior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetitionMondiale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetitionNationale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompetitionSenior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConfederationContinentale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entraineur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipeEspoir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipeJunior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipeNationale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquipeSenior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Federation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederationInternationale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FederationNationale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Joueur"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JoueurEspoir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JoueurInternational"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JoueurJunior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JoueurSenior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProbInconsistentClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affilie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affilieeA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affronte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#composeDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#entraine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#entrainePar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estOrganisee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#faitParticiper"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#joueDans"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#motive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#organise"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participeA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Club"/>
+        <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competition"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionContinentale"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionEspoir"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionJunior"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionMondiale"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionNationale"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionSenior"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConfederationContinentale"/>
+        <Class IRI="#Federation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entraineur"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipe"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeEspoir"/>
+        <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeJunior"/>
+        <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeNationale"/>
+        <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeSenior"/>
+        <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Federation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederationInternationale"/>
+        <Class IRI="#Federation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederationNationale"/>
+        <Class IRI="#Federation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joueur"/>
+        <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurEspoir"/>
+        <Class IRI="#Joueur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurInternational"/>
+        <Class IRI="#Joueur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurJunior"/>
+        <Class IRI="#Joueur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurSenior"/>
+        <Class IRI="#Joueur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personne"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProbInconsistentClass"/>
+        <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProbInconsistentClass"/>
+        <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Club"/>
+        <Class IRI="#EquipeNationale"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Competition"/>
+        <Class IRI="#Equipe"/>
+        <Class IRI="#Federation"/>
+        <Class IRI="#Personne"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CompetitionContinentale"/>
+        <Class IRI="#CompetitionMondiale"/>
+        <Class IRI="#CompetitionNationale"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CompetitionEspoir"/>
+        <Class IRI="#CompetitionJunior"/>
+        <Class IRI="#CompetitionSenior"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ConfederationContinentale"/>
+        <Class IRI="#FederationInternationale"/>
+        <Class IRI="#FederationNationale"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Entraineur"/>
+        <Class IRI="#Joueur"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EquipeEspoir"/>
+        <Class IRI="#EquipeJunior"/>
+        <Class IRI="#EquipeSenior"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#JoueurEspoir"/>
+        <Class IRI="#JoueurJunior"/>
+        <Class IRI="#JoueurSenior"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#JoueurEspoir"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JoueurInternational"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#affilie"/>
+        <ObjectProperty IRI="#affilieeA"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#joueDans"/>
+        <ObjectProperty IRI="#composeDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#entrainePar"/>
+        <ObjectProperty IRI="#entraine"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#estOrganisee"/>
+        <ObjectProperty IRI="#organise"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#faitParticiper"/>
+        <ObjectProperty IRI="#participeA"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#affilieeA"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#entraine"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#entrainePar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#estOrganisee"/>
+    </FunctionalObjectProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProbInconsistentClass</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Une sous-calsse pour tester l&apos;inconsistence
+</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
