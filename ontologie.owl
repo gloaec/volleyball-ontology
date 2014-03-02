@@ -145,92 +145,330 @@
         <Class IRI="#Equipe"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Club"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#composeDe"/>
+            <Class IRI="#Joueur"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Club"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionNationale"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Competition"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#estOrganisee"/>
+            <Class IRI="#Federation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#Equipe"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionContinentale"/>
         <Class IRI="#Competition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CompetitionContinentale"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#EquipeNationale"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionContinentale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estOrganisee"/>
+            <Class IRI="#ConfederationContinentale"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CompetitionEspoir"/>
         <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionEspoir"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#EquipeEspoir"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionJunior"/>
         <Class IRI="#Competition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CompetitionJunior"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#EquipeJunior"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CompetitionMondiale"/>
         <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionMondiale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estOrganisee"/>
+            <Class IRI="#FederationInternationale"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionNationale"/>
         <Class IRI="#Competition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CompetitionNationale"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#Club"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionNationale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estOrganisee"/>
+            <Class IRI="#FederationNationale"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CompetitionSenior"/>
         <Class IRI="#Competition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionSenior"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#EquipeSenior"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConfederationContinentale"/>
         <Class IRI="#Federation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ConfederationContinentale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#organise"/>
+            <Class IRI="#CompetitionContinentale"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Entraineur"/>
         <Class IRI="#Personne"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Entraineur"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#entraine"/>
+            <Class IRI="#Equipe"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Equipe"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#Competition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipe"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#entrainePar"/>
+            <Class IRI="#Entraineur"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EquipeEspoir"/>
         <Class IRI="#Equipe"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#EquipeEspoir"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#composeDe"/>
+            <Class IRI="#JoueurEspoir"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeEspoir"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionEspoir"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#EquipeJunior"/>
         <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeJunior"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#composeDe"/>
+            <Class IRI="#JoueurJunior"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeJunior"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionJunior"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EquipeNationale"/>
         <Class IRI="#Equipe"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#EquipeNationale"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#composeDe"/>
+            <Class IRI="#JoueurInternational"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeNationale"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionContinentale"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#EquipeSenior"/>
         <Class IRI="#Equipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeSenior"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#composeDe"/>
+            <Class IRI="#JoueurSenior"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeSenior"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionSenior"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Federation"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Federation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#organise"/>
+            <Class IRI="#Competition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Federation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#affilie"/>
+            <Class IRI="#Federation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Federation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#affilieeA"/>
+            <Class IRI="#Federation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FederationInternationale"/>
         <Class IRI="#Federation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FederationInternationale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#organise"/>
+            <Class IRI="#CompetitionMondiale"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FederationNationale"/>
         <Class IRI="#Federation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FederationNationale"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#organise"/>
+            <Class IRI="#CompetitionNationale"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Joueur"/>
         <Class IRI="#Personne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joueur"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#Club"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurEspoir"/>
         <Class IRI="#Joueur"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#JoueurEspoir"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeEspoir"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#JoueurInternational"/>
         <Class IRI="#Joueur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurInternational"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeNationale"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurJunior"/>
         <Class IRI="#Joueur"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#JoueurJunior"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeJunior"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#JoueurSenior"/>
         <Class IRI="#Joueur"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurSenior"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeSenior"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Personne"/>
@@ -283,14 +521,6 @@
         <Class IRI="#JoueurJunior"/>
         <Class IRI="#JoueurSenior"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#JoueurEspoir"/>
-        <NamedIndividual IRI="#Henri_Fromage"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#JoueurInternational"/>
-        <NamedIndividual IRI="#Henri_Fromage"/>
-    </ClassAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#affilie"/>
         <ObjectProperty IRI="#affilieeA"/>
@@ -312,9 +542,6 @@
         <ObjectProperty IRI="#participeA"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="#affilieeA"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
         <ObjectProperty IRI="#entraine"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -323,6 +550,166 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#estOrganisee"/>
     </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#entraine"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#entrainePar"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#organise"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#affronte"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#composeDe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#entraine"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#entrainePar"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#estOrganisee"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#faitParticiper"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#joueDans"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#organise"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#participeA"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#affilie"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#affilieeA"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#motive"/>
+    </ReflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#affronte"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#composeDe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#entraine"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#entrainePar"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#estOrganisee"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#faitParticiper"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#joueDans"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#organise"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#participeA"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affilie"/>
+        <Class IRI="#Federation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affilieeA"/>
+        <Class IRI="#Federation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affronte"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#composeDe"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#entraine"/>
+        <Class IRI="#Entraineur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#entrainePar"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estOrganisee"/>
+        <Class IRI="#Competition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#faitParticiper"/>
+        <Class IRI="#Competition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#joueDans"/>
+        <Class IRI="#Joueur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#organise"/>
+        <Class IRI="#Federation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#participeA"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affilie"/>
+        <Class IRI="#Federation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affilieeA"/>
+        <Class IRI="#Federation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affronte"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#composeDe"/>
+        <Class IRI="#Joueur"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#entraine"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#entrainePar"/>
+        <Class IRI="#Entraineur"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#estOrganisee"/>
+        <Class IRI="#Federation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#faitParticiper"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#joueDans"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#organise"/>
+        <Class IRI="#Competition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#participeA"/>
+        <Class IRI="#Competition"/>
+    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ProbInconsistentClass</IRI>
