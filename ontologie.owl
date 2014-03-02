@@ -129,9 +129,6 @@
         <ObjectProperty IRI="#joueDans"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#motive"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#organise"/>
     </Declaration>
     <Declaration>
@@ -139,6 +136,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Henri_Fromage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PSG"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Club"/>
@@ -159,6 +159,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Club"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionNationale"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Club"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionContinentale"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Competition"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
@@ -177,6 +191,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Competition"/>
+        <ObjectMinCardinality cardinality="8">
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#Equipe"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Competition"/>
+        <ObjectMaxCardinality cardinality="32">
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#Equipe"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CompetitionContinentale"/>
         <Class IRI="#Competition"/>
     </SubClassOf>
@@ -193,6 +221,13 @@
             <ObjectProperty IRI="#estOrganisee"/>
             <Class IRI="#ConfederationContinentale"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionContinentale"/>
+        <ObjectExactCardinality cardinality="16">
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#EquipeNationale"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionEspoir"/>
@@ -226,6 +261,13 @@
             <ObjectProperty IRI="#estOrganisee"/>
             <Class IRI="#FederationInternationale"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompetitionMondiale"/>
+        <ObjectExactCardinality cardinality="16">
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#EquipeNationale"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionNationale"/>
@@ -279,6 +321,13 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Entraineur"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#entraine"/>
+            <Class IRI="#Equipe"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Equipe"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
@@ -295,6 +344,20 @@
             <ObjectProperty IRI="#entrainePar"/>
             <Class IRI="#Entraineur"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipe"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#Competition"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipe"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#Competition"/>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EquipeEspoir"/>
@@ -315,6 +378,20 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#EquipeEspoir"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionEspoir"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeEspoir"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionEspoir"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#EquipeJunior"/>
         <Class IRI="#Equipe"/>
     </SubClassOf>
@@ -331,6 +408,20 @@
             <ObjectProperty IRI="#participeA"/>
             <Class IRI="#CompetitionJunior"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeJunior"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionJunior"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeJunior"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionJunior"/>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EquipeNationale"/>
@@ -351,6 +442,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#EquipeNationale"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionContinentale"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeNationale"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionNationale"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#EquipeSenior"/>
         <Class IRI="#Equipe"/>
     </SubClassOf>
@@ -367,6 +472,20 @@
             <ObjectProperty IRI="#participeA"/>
             <Class IRI="#CompetitionSenior"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeSenior"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionSenior"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquipeSenior"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty IRI="#participeA"/>
+            <Class IRI="#CompetitionSenior"/>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Federation"/>
@@ -427,6 +546,27 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Joueur"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#Equipe"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joueur"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#Club"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joueur"/>
+        <ObjectMaxCardinality cardinality="2">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#Equipe"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#JoueurEspoir"/>
         <Class IRI="#Joueur"/>
     </SubClassOf>
@@ -436,6 +576,13 @@
             <ObjectProperty IRI="#joueDans"/>
             <Class IRI="#EquipeEspoir"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurEspoir"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeEspoir"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurInternational"/>
@@ -449,6 +596,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#JoueurInternational"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeNationale"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#JoueurJunior"/>
         <Class IRI="#Joueur"/>
     </SubClassOf>
@@ -460,6 +614,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#JoueurJunior"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeJunior"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#JoueurSenior"/>
         <Class IRI="#Joueur"/>
     </SubClassOf>
@@ -469,6 +630,13 @@
             <ObjectProperty IRI="#joueDans"/>
             <Class IRI="#EquipeSenior"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JoueurSenior"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeSenior"/>
+        </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Personne"/>
@@ -521,6 +689,23 @@
         <Class IRI="#JoueurJunior"/>
         <Class IRI="#JoueurSenior"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#JoueurSenior"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#PSG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#PSG"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <NamedIndividual IRI="#PSG"/>
+    </ObjectPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#affilie"/>
         <ObjectProperty IRI="#affilieeA"/>
@@ -592,9 +777,6 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#affilieeA"/>
     </TransitiveObjectProperty>
-    <ReflexiveObjectProperty>
-        <ObjectProperty IRI="#motive"/>
-    </ReflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#affronte"/>
     </IrreflexiveObjectProperty>
