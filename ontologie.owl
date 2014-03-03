@@ -992,6 +992,10 @@
         <NamedIndividual IRI="#Christian_Goudat"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#JoueurSenior"/>
+        <NamedIndividual IRI="#Christian_Goudat"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#EquipeNationale"/>
         <NamedIndividual IRI="#Equipe_De_France"/>
     </ClassAssertion>
@@ -1006,6 +1010,14 @@
     <ClassAssertion>
         <Class IRI="#EquipeSenior"/>
         <NamedIndividual IRI="#Genova_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JoueurInternational"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JoueurJunior"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CompetitionContinentale"/>
@@ -1254,8 +1266,8 @@
         <Literal datatypeIRI="&xsd;integer">12</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#affilieeA"/>
         <ObjectProperty IRI="#affilie"/>
+        <ObjectProperty IRI="#affilieeA"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#joueDans"/>
