@@ -99,9 +99,6 @@
         <Class IRI="#Personne"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ProbInconsistentClass"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#affilie"/>
     </Declaration>
     <Declaration>
@@ -138,11 +135,211 @@
         <ObjectProperty IRI="#participeA"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#acronyme"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#acronymeClub"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#acronymeFederation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#budget"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#classementInternational"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateDebut"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dateFin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nationnalite"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomCompetition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomEquipe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomFederation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomPersonne"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroClub"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroInternational"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pays"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paysCompetition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paysEquipe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#poste"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prenom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prenomPersonne"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sexe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#slogan"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titresGagnes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titresGagnesEntraineur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titresGagnesJoueur"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ville"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Barcelone_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Berlin_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brazil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Christian_Goudat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Equipe_De_France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Genova_Seniors"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Henri_Fromage"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PSG"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lisbonne_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Luxembourg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Madrid_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paris_Espoirs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paris_Junior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paris_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Praha_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roger_Munster"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roma_Seniors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sylvain_Emmental"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Joueur"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#Equipe"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JoueurEspoir"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Joueur"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#age"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;integer">18</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="&xsd;maxExclusive">
+                        <Literal datatypeIRI="&xsd;integer">21</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JoueurInternational"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#EquipeNationale"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JoueurJunior"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Joueur"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#age"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;integer">16</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="&xsd;maxExclusive">
+                        <Literal datatypeIRI="&xsd;integer">18</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JoueurSenior"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Joueur"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#age"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;integer">21</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Club"/>
         <Class IRI="#Equipe"/>
@@ -213,10 +410,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionContinentale"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#faitParticiper"/>
-            <Class IRI="#EquipeNationale"/>
-        </ObjectSomeValuesFrom>
+        <ObjectUnionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#faitParticiper"/>
+                <Class IRI="#Club"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#faitParticiper"/>
+                <Class IRI="#EquipeNationale"/>
+            </ObjectAllValuesFrom>
+        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionContinentale"/>
@@ -236,7 +439,7 @@
         <Class IRI="#CompetitionContinentale"/>
         <ObjectExactCardinality cardinality="16">
             <ObjectProperty IRI="#faitParticiper"/>
-            <Class IRI="#EquipeNationale"/>
+            <Class IRI="#Equipe"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -320,16 +523,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionNationale"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#faitParticiper"/>
-            <Class IRI="#Club"/>
-        </ObjectSomeValuesFrom>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#estOrganisee"/>
+            <Class IRI="#FederationNationale"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompetitionNationale"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#estOrganisee"/>
-            <Class IRI="#FederationNationale"/>
+            <ObjectProperty IRI="#faitParticiper"/>
+            <Class IRI="#Club"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -634,13 +837,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Joueur"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#joueDans"/>
-            <Class IRI="#Club"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Joueur"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#joueDans"/>
             <Class IRI="#Equipe"/>
@@ -655,6 +851,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Joueur"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#joueDans"/>
+            <Class IRI="#Club"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Joueur"/>
         <ObjectMaxCardinality cardinality="2">
             <ObjectProperty IRI="#joueDans"/>
             <Class IRI="#Equipe"/>
@@ -666,17 +869,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurEspoir"/>
-        <ObjectSomeValuesFrom>
+        <ObjectMaxCardinality cardinality="1">
             <ObjectProperty IRI="#joueDans"/>
             <Class IRI="#EquipeEspoir"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#JoueurEspoir"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#joueDans"/>
-            <Class IRI="#EquipeEspoir"/>
-        </ObjectExactCardinality>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurInternational"/>
@@ -702,17 +898,20 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurJunior"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#joueDans"/>
-            <Class IRI="#EquipeJunior"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#JoueurJunior"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#joueDans"/>
-            <Class IRI="#EquipeJunior"/>
-        </ObjectExactCardinality>
+        <ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#joueDans"/>
+                <Class IRI="#EquipeEspoir"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#joueDans"/>
+                <Class IRI="#EquipeJunior"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#joueDans"/>
+                <Class IRI="#EquipeSenior"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#JoueurSenior"/>
@@ -726,23 +925,8 @@
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#JoueurSenior"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#joueDans"/>
-            <Class IRI="#EquipeSenior"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Personne"/>
         <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ProbInconsistentClass"/>
-        <Class IRI="#Competition"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ProbInconsistentClass"/>
-        <Class IRI="#Equipe"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Club"/>
@@ -784,22 +968,291 @@
         <Class IRI="#JoueurSenior"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="#JoueurSenior"/>
-        <NamedIndividual IRI="#Henri_Fromage"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Club"/>
-        <NamedIndividual IRI="#PSG"/>
+        <NamedIndividual IRI="#Barcelone_Seniors"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#EquipeSenior"/>
-        <NamedIndividual IRI="#PSG"/>
+        <NamedIndividual IRI="#Barcelone_Seniors"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Berlin_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Berlin_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeNationale"/>
+        <NamedIndividual IRI="#Brazil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Joueur"/>
+        <NamedIndividual IRI="#Christian_Goudat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeNationale"/>
+        <NamedIndividual IRI="#Equipe_De_France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Equipe_De_France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Genova_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Genova_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CompetitionContinentale"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Lisbonne_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Lisbonne_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeNationale"/>
+        <NamedIndividual IRI="#Luxembourg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Madrid_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Madrid_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Paris_Espoirs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeEspoir"/>
+        <NamedIndividual IRI="#Paris_Espoirs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Paris_Junior"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeJunior"/>
+        <NamedIndividual IRI="#Paris_Junior"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Paris_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Paris_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Praha_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Praha_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Joueur"/>
+        <NamedIndividual IRI="#Roger_Munster"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#Roma_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EquipeSenior"/>
+        <NamedIndividual IRI="#Roma_Seniors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Joueur"/>
+        <NamedIndividual IRI="#Sylvain_Emmental"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Joueur"/>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Barcelone_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Berlin_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Christian_Goudat"/>
+        <NamedIndividual IRI="#Lisbonne_Seniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Genova_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#joueDans"/>
         <NamedIndividual IRI="#Henri_Fromage"/>
-        <NamedIndividual IRI="#PSG"/>
+        <NamedIndividual IRI="#Equipe_De_France"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <NamedIndividual IRI="#Paris_Seniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Lisbonne_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Madrid_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Paris_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Praha_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Roger_Munster"/>
+        <NamedIndividual IRI="#Equipe_De_France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Roger_Munster"/>
+        <NamedIndividual IRI="#Berlin_Seniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#participeA"/>
+        <NamedIndividual IRI="#Roma_Seniors"/>
+        <NamedIndividual IRI="#Ligue_Champions_Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Sylvain_Emmental"/>
+        <NamedIndividual IRI="#Genova_Seniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+        <NamedIndividual IRI="#Paris_Seniors"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#joueDans"/>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+        <NamedIndividual IRI="#Equipe_De_France"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#classementInternational"/>
+        <NamedIndividual IRI="#Brazil"/>
+        <Literal datatypeIRI="&xsd;integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Christian_Goudat"/>
+        <Literal datatypeIRI="&xsd;integer">21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroClub"/>
+        <NamedIndividual IRI="#Christian_Goudat"/>
+        <Literal datatypeIRI="&xsd;integer">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#classementInternational"/>
+        <NamedIndividual IRI="#Equipe_De_France"/>
+        <Literal datatypeIRI="&xsd;integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <Literal datatypeIRI="&xsd;integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomPersonne"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <Literal datatypeIRI="&xsd;string">Fromage</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroClub"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <Literal datatypeIRI="&xsd;integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroInternational"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <Literal datatypeIRI="&xsd;integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#prenomPersonne"/>
+        <NamedIndividual IRI="#Henri_Fromage"/>
+        <Literal datatypeIRI="&xsd;string">Henri</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#classementInternational"/>
+        <NamedIndividual IRI="#Luxembourg"/>
+        <Literal datatypeIRI="&xsd;integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomEquipe"/>
+        <NamedIndividual IRI="#Paris_Espoirs"/>
+        <Literal datatypeIRI="&xsd;string">Paris Espoirs</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Roger_Munster"/>
+        <Literal datatypeIRI="&xsd;integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroClub"/>
+        <NamedIndividual IRI="#Roger_Munster"/>
+        <Literal datatypeIRI="&xsd;integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroInternational"/>
+        <NamedIndividual IRI="#Roger_Munster"/>
+        <Literal datatypeIRI="&xsd;integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Sylvain_Emmental"/>
+        <Literal datatypeIRI="&xsd;integer">19</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+        <Literal datatypeIRI="&xsd;integer">33</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroClub"/>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+        <Literal datatypeIRI="&xsd;integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroInternational"/>
+        <NamedIndividual IRI="#Thomas_Pouet"/>
+        <Literal datatypeIRI="&xsd;integer">12</Literal>
+    </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#affilieeA"/>
         <ObjectProperty IRI="#affilie"/>
@@ -994,12 +1447,282 @@
         <ObjectProperty IRI="#participeA"/>
         <Class IRI="#Competition"/>
     </ObjectPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ProbInconsistentClass</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Une sous-calsse pour tester l&apos;inconsistence
-</Literal>
-    </AnnotationAssertion>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#acronyme"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#acronymeClub"/>
+        <DataProperty IRI="#acronyme"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#acronymeFederation"/>
+        <DataProperty IRI="#acronyme"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#age"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#budget"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#classementInternational"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#dateDebut"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#dateFin"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nationnalite"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nom"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomCompetition"/>
+        <DataProperty IRI="#nom"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomEquipe"/>
+        <DataProperty IRI="#nom"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomFederation"/>
+        <DataProperty IRI="#nom"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomPersonne"/>
+        <DataProperty IRI="#nom"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numeroClub"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numeroInternational"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#pays"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#paysCompetition"/>
+        <DataProperty IRI="#pays"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#paysEquipe"/>
+        <DataProperty IRI="#pays"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#poste"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#prenom"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#prenomPersonne"/>
+        <DataProperty IRI="#prenom"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sexe"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#slogan"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#titresGagnes"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#titresGagnesEntraineur"/>
+        <DataProperty IRI="#titresGagnes"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#titresGagnesJoueur"/>
+        <DataProperty IRI="#titresGagnes"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#ville"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#acronymeClub"/>
+        <Class IRI="#Club"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#acronymeFederation"/>
+        <Class IRI="#Federation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#age"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#budget"/>
+        <Class IRI="#Club"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#classementInternational"/>
+        <Class IRI="#EquipeNationale"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateDebut"/>
+        <Class IRI="#Competition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dateFin"/>
+        <Class IRI="#Competition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nationnalite"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomCompetition"/>
+        <Class IRI="#Competition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomEquipe"/>
+        <Class IRI="#Equipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomFederation"/>
+        <Class IRI="#Federation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomPersonne"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroClub"/>
+        <Class IRI="#Joueur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroInternational"/>
+        <Class IRI="#JoueurInternational"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#paysCompetition"/>
+        <Class IRI="#Competition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#paysEquipe"/>
+        <Class IRI="#Equipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#poste"/>
+        <Class IRI="#Joueur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prenomPersonne"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sexe"/>
+        <Class IRI="#Personne"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#slogan"/>
+        <Class IRI="#Equipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#titresGagnesEntraineur"/>
+        <Class IRI="#Entraineur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#titresGagnesJoueur"/>
+        <Class IRI="#Joueur"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ville"/>
+        <Class IRI="#Club"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#acronyme"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#age"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#budget"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#classementInternational"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateDebut"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dateFin"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nationnalite"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nom"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroClub"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroInternational"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pays"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#poste"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#prenom"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sexe"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#slogan"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#titresGagnes"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ville"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="#dateDebut"/>
+        <DataProperty IRI="#dateFin"/>
+    </DisjointDataProperties>
 </Ontology>
 
 
